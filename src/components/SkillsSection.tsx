@@ -1,43 +1,53 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Code, Wrench, Sparkles, BookOpen, Languages } from "lucide-react";
+import { Code, Wrench, Sparkles, BookOpen, Database, Server, Palette, Layers, GitBranch } from "lucide-react";
 import { useState } from "react";
 
 const skillCategories = [
+  {
+    title: "Programming Languages",
+    icon: Code,
+    skills: ["JavaScript", "Java", "HTML5", "CSS3"],
+  },
+  {
+    title: "Frontend Development",
+    icon: Layers,
+    skills: ["React.js", "Tailwind CSS", "Responsive Web Design"],
+  },
+  {
+    title: "Backend Development",
+    icon: Server,
+    skills: ["Node.js", "Express.js", "REST APIs", "CRUD Operations", "User Authentication"],
+  },
+  {
+    title: "Database",
+    icon: Database,
+    skills: ["MongoDB", "Mongoose"],
+  },
+  {
+    title: "Cyber Security",
+    icon: BookOpen,
+    skills: ["Network Security", "Web Security", "Vulnerability Assessment", "Ethical Hacking Fundamentals"],
+  },
   {
     title: "Security Tools",
     icon: Sparkles,
     skills: ["Kali Linux", "Wireshark", "Burp Suite", "Nmap"],
   },
   {
-    title: "Programming Language",
-    icon: Code,
-    skills: ["Java"],
+    title: "UI/UX Design",
+    icon: Palette,
+    skills: ["UI/UX Design", "Figma", "Responsive Interface Design"],
   },
   {
-    title: "Web Development",
-    icon: Code,
-    skills: ["HTML", "CSS", "JavaScript", "React.js", "Node.js (Basics)"],
+    title: "Developer Tools & Deployment",
+    icon: GitBranch,
+    skills: ["Git", "GitHub", "VS Code", "Vercel", "Render", "Notion", "Jira"],
   },
   {
-    title: "Tools",
+    title: "Additional Technical Concepts",
     icon: Wrench,
-    skills: ["GitHub", "VS Code", "Figma", "Vercel"],
-  },
-  {
-    title: "Learning",
-    icon: BookOpen,
-    skills: ["CEH (Certified Ethical Hacker)", "Basic Linux Commands"],
-  },
-  {
-    title: "Japanese",
-    icon: Languages,
-    skills: [
-      "JLPT N5 – Result Awaited",
-      "JLPT N4 – Learning",
-      "Hiragana & Katakana",
-      "Basic Reading & Writing",
-    ],
+    skills: ["Payment Gateway Integration", "Version Control", "Secure Web Application Development"],
   },
 ];
 
@@ -62,14 +72,14 @@ const SkillsSection = () => {
           </h2>
           <div className="w-16 h-1 shimmer-line rounded mb-10" />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skillCategories.map((cat, i) => (
               <motion.div
                 key={cat.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.15 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
                 onHoverStart={() => setHoveredCard(i)}
                 onHoverEnd={() => setHoveredCard(null)}
               >
@@ -100,7 +110,7 @@ const SkillsSection = () => {
                           initial={{ opacity: 0, scale: 0.8 }}
                           whileInView={{ opacity: 1, scale: 1 }}
                           viewport={{ once: true }}
-                          transition={{ delay: i * 0.15 + j * 0.05 }}
+                          transition={{ delay: i * 0.1 + j * 0.05 }}
                           whileHover={{ scale: 1.08, y: -2 }}
                           className="px-3 py-1.5 text-sm rounded-full bg-background text-foreground border border-border hover:border-primary/50 hover:text-primary hover:shadow-md hover:shadow-primary/10 transition-all duration-300 cursor-default"
                         >
