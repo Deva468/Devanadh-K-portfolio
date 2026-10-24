@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowDown, Download, Shield, Palette, Github, Linkedin, Code } from "lucide-react";
+import { ArrowDown, Download, Shield, Palette, Github, Linkedin, Code, Languages } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -25,7 +25,7 @@ const HeroSection = () => {
           >
             <Badge variant="outline" className="mb-6 border-primary/30 text-primary animate-pulse-glow">
               <Shield className="w-3 h-3 mr-1" />
-              Aspiring Cybersecurity Professional
+              Aspiring MERN Stack Developer | Cyber Security
             </Badge>
           </motion.div>
 
@@ -40,8 +40,9 @@ const HeroSection = () => {
             transition={{ delay: 0.5 }}
             className="text-muted-foreground text-lg mb-8 max-w-lg"
           >
-            B.E. CSE (Cyber Security) student at Dhanalakshmi College of Engineering
-            with interests in Cyber Security, MERN Stack Development, and UI/UX Design.
+            Final-year B.E. CSE (Cyber Security) student and aspiring MERN Stack
+            Developer — building secure, responsive web applications while preparing
+            for the CEH certification and learning Japanese.
           </motion.p>
 
           <motion.div
@@ -56,7 +57,7 @@ const HeroSection = () => {
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild className="group">
-              <a href="/Devanandh_K_Resume_CS.docx" download>
+              <a href="/Devanandh_K_Resume.pdf" download="Devanandh_K_Resume.pdf">
                 <Download className="mr-2 w-4 h-4 group-hover:scale-110 transition-transform" /> Download Resume
               </a>
             </Button>
@@ -71,7 +72,7 @@ const HeroSection = () => {
             <a href="https://www.linkedin.com/in/devanandh-k-a56708337" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary hover:scale-125 transition-all duration-300">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="https://github.com/dashboard" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary hover:scale-125 transition-all duration-300">
+            <a href="https://github.com/Deva468" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary hover:scale-125 transition-all duration-300">
               <Github className="w-5 h-5" />
             </a>
           </motion.div>
@@ -115,7 +116,7 @@ const HeroSection = () => {
             >
               <div className="flex items-center gap-2 text-sm">
                 <Palette className="w-4 h-4 text-primary" />
-                <span className="text-foreground">Designer</span>
+                <span className="text-foreground">UI/UX Designer</span>
               </div>
             </motion.div>
 
@@ -126,7 +127,18 @@ const HeroSection = () => {
             >
               <div className="flex items-center gap-2 text-sm">
                 <Code className="w-4 h-4 text-primary" />
-                <span className="text-foreground">Developer</span>
+                <span className="text-foreground">MERN Developer</span>
+              </div>
+            </motion.div>
+
+            <motion.div
+              animate={{ y: [0, 6, 0], x: [0, 3, 0] }}
+              transition={{ repeat: Infinity, duration: 3.5, delay: 0.5 }}
+              className="absolute top-1/2 -left-12 bg-card border border-border rounded-xl px-3 py-2 shadow-lg card-interactive"
+            >
+              <div className="flex items-center gap-2 text-sm">
+                <Languages className="w-4 h-4 text-primary" />
+                <span className="text-foreground">Japanese Learner</span>
               </div>
             </motion.div>
           </div>

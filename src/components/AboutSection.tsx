@@ -3,8 +3,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Briefcase, Award, Languages } from "lucide-react";
 
 const stats = [
-  { icon: Briefcase, label: "Internships", value: "4" },
-  { icon: Award, label: "Certificates", value: "10+" },
+  { icon: Briefcase, label: "Internships", value: "5" },
+  { icon: Award, label: "Certificates", value: "15+" },
   { icon: GraduationCap, label: "Year", value: "2023–27" },
   { icon: Languages, label: "Languages", value: "3" },
 ];
@@ -34,19 +34,15 @@ const AboutSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Aspiring Cyber Security professional pursuing a B.E. in Computer Science and
-                Engineering (Cyber Security) at Dhanalakshmi College of Engineering. I have
-                knowledge of Network Security, Web Security, Vulnerability Assessment, and
-                Ethical Hacking fundamentals, with experience using tools such as Kali Linux,
-                Wireshark, Burp Suite, Nmap, and Postman.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                I have also completed multiple Web Development internships, where I gained
-                practical experience in HTML, CSS, JavaScript, React.js, and Node.js (Basics).
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                I am currently pursuing the Certified Ethical Hacker (CEH) certification and
-                learning Japanese (JLPT N5 – Result Awaited, N4 in Progress).
+                Final-year B.E. Computer Science (Cyber Security) student and aspiring
+                MERN Stack Developer. I have completed five internships and built four
+                deployed projects using React.js, Node.js, Express.js, and MongoDB,
+                including CoreDesk, a full-stack IT service desk platform. With a cyber
+                security background, I build secure and responsive web applications, and
+                I am preparing for the CEH certification. I am also learning Japanese,
+                currently preparing for NAT-TEST 5Q and working toward N4 level
+                (NAT-TEST 4Q). Open to fresher roles in Full Stack Development and Cyber
+                Security.
               </p>
 
               <div className="flex flex-wrap gap-4 mt-4">
@@ -74,7 +70,7 @@ const AboutSection = () => {
                   </div>
                   <p className="text-foreground font-medium">B.E. CSE (Cyber Security)</p>
                   <p className="text-muted-foreground text-sm">Dhanalakshmi College of Engineering</p>
-                  <p className="text-muted-foreground text-sm">2023 – 2027 • CGPA: <span className="text-primary font-bold text-base">8.14</span> <span className="text-xs">(till 5th Semester)</span></p>
+                  <p className="text-muted-foreground text-sm">2023 – 2027 • CGPA: <span className="text-primary font-bold text-base">8.14 / 10</span> <span className="text-xs">— Up to 6th Semester</span></p>
                 </CardContent>
               </Card>
 

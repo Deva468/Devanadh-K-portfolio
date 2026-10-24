@@ -4,47 +4,45 @@ import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
-    role: "Web Development Intern",
-    company: "Ekhie Business Solutions",
-    period: "Mar – Apr 2025",
+    role: "Web Development and Designing Intern",
+    company: "OASIS Infobyte",
+    period: "Sep – Oct 2026",
     points: [
-      "Assisted in developing and maintaining websites using HTML, CSS, and JavaScript",
-      "Collaborated with senior developers to implement responsive web design",
-      "Gained practical experience in front-end development workflows",
-    ],
-  },
-  {
-    role: "UI/UX Designing Intern",
-    company: "Industrial Design & Animations, Chennai",
-    period: "Jul – Aug 2025",
-    points: [
-      "Designed user interfaces and user experiences for mobile and web applications using Figma",
-      "Conducted user research and created wireframes, prototypes, and design systems",
-      "Worked closely with the development team to ensure design feasibility",
-    ],
-  },
-  {
-    role: "Front-End Developer Intern",
-    company: "SkillSync",
-    period: "Jan – Feb 2026",
-    points: [
-      "Developed front-end components using HTML, CSS, and JavaScript",
-      "Worked on real-time projects to improve user interface and responsiveness",
-      "Learned modern front-end development practices and debugging techniques",
-      "Collaborated with mentors and team members in project development",
-      "Strengthened practical skills in web development and responsive design",
+      "Engineered a Pizza Delivery & Inventory Management application on the MERN stack (React.js, Node.js, Express.js, MongoDB), covering ordering, stock tracking, and admin workflows",
+      "Integrated the Razorpay payment gateway for secure online payments and delivered the complete project within the internship",
     ],
   },
   {
     role: "Frontend Developer Intern",
     company: "NoviTech R&D Pvt Ltd",
-    period: "Feb – Mar 2026",
+    period: "Jan – Feb 2026",
     points: [
-      "Built the frontend of an e-commerce web application using React.js",
-      "Designed responsive, component-based UIs with React.js, HTML, CSS, and JavaScript",
-      "Created reusable components and managed UI state for a smooth user flow",
-      "Focused on clean layouts, mobile responsiveness, and accessible design",
-      "Strengthened practical skills in modern frontend development and debugging",
+      "Developed the frontend of an e-commerce web application with React.js, HTML, CSS, and JavaScript, covering product listing, cart, and checkout screens",
+      "Delivered a fully responsive UI that works consistently across mobile, tablet, and desktop",
+    ],
+  },
+  {
+    role: "Frontend Developer Intern",
+    company: "SkillSync",
+    period: "Jan – Feb 2026",
+    points: [
+      "Converted Figma designs into reusable React components and responsive layouts, reducing duplicate UI code across pages",
+    ],
+  },
+  {
+    role: "Web Development Intern",
+    company: "Ekhie Business Solutions",
+    period: "Mar – Apr 2025",
+    points: [
+      "Recreated company web pages from Figma files as responsive components with HTML, CSS, JavaScript, and React.js, collaborating with the team on feedback to refine the user experience",
+    ],
+  },
+  {
+    role: "UI/UX Designing Intern",
+    company: "Industrial Design & Animation",
+    period: "Jul – Aug 2025",
+    points: [
+      "Designed a Rent Management App in Figma, taking it from wireframes to interactive prototypes for mobile and desktop and iterating on usability feedback",
     ],
   },
 ];
@@ -74,7 +72,7 @@ const ExperienceSection = () => {
             <div className="space-y-6">
               {experiences.map((exp, i) => (
                 <motion.div
-                  key={exp.role}
+                  key={exp.company}
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
