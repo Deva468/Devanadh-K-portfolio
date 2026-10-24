@@ -8,8 +8,22 @@ import certNovitech from "@/assets/cert-novitech-masterclass.jpg";
 import certCydenium from "@/assets/cert-cydenium.jpg";
 import certZenith from "@/assets/cert-zenith.jpg";
 import certSkillsync from "@/assets/cert-skillsync.jpg";
+import certOasisCompletion from "@/assets/cert-oasis-completion.jpg";
+import certOasisStar from "@/assets/cert-oasis-star.jpg";
+import certSimats from "@/assets/cert-simats.jpg";
+import certNexaura from "@/assets/cert-nexaura.jpg";
+import certCisco from "@/assets/cert-cisco.jpg";
+import certCursa from "@/assets/cert-cursa.jpg";
+import certKaspersky from "@/assets/cert-kaspersky.jpg";
 
 const certificates = [
+  { src: certOasisCompletion, alt: "OASIS Infobyte - Web Development and Designing Internship Completion" },
+  { src: certOasisStar, alt: "OASIS Infobyte - Star Performer of AICTE Internship" },
+  { src: certSimats, alt: "SIMATS Engineering - TechMaze at TechTrove 3.0 Achievement" },
+  { src: certNexaura, alt: "NEXAURA'26 - Mind Maze Appreciation, New Prince Shri Bhavani College" },
+  { src: certCisco, alt: "Cisco Networking Academy - Introduction to Cybersecurity" },
+  { src: certCursa, alt: "Cursa - Principles of Management Course Completion" },
+  { src: certKaspersky, alt: "Kaspersky CTF - Participation" },
   { src: certEkhie, alt: "Ekhie Business Solutions - Web Developer Internship" },
   { src: certTata, alt: "Tata Strive & Microsoft - Cybersecurity Certificate" },
   { src: certOracle, alt: "Oracle Certified Foundations Associate" },
