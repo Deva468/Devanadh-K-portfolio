@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Briefcase } from "lucide-react";
+import { Briefcase, ExternalLink } from "lucide-react";
 
 const experiences = [
   {
@@ -9,8 +9,12 @@ const experiences = [
     period: "Sep – Oct 2026",
     points: [
       "Engineered a Pizza Delivery & Inventory Management application on the MERN stack (React.js, Node.js, Express.js, MongoDB), covering ordering, stock tracking, and admin workflows",
+      "Built the React.js frontend and connected it to the Express.js backend and MongoDB database for menu and inventory data",
       "Integrated the Razorpay payment gateway for secure online payments and delivered the complete project within the internship",
+      "Received the OASIS Infobyte Star Performer award and a Letter of Recommendation for the internship",
     ],
+    projectLink: "https://pizza-delivery-system-beige.vercel.app/login",
+    projectLabel: "View Internship Project — Pizza Delivery System",
   },
   {
     role: "Frontend Developer Intern",
@@ -19,6 +23,7 @@ const experiences = [
     points: [
       "Developed the frontend of an e-commerce web application with React.js, HTML, CSS, and JavaScript, covering product listing, cart, and checkout screens",
       "Delivered a fully responsive UI that works consistently across mobile, tablet, and desktop",
+      "Created reusable components and managed UI state for a smooth user flow",
     ],
   },
   {
@@ -27,6 +32,7 @@ const experiences = [
     period: "Jan – Feb 2026",
     points: [
       "Converted Figma designs into reusable React components and responsive layouts, reducing duplicate UI code across pages",
+      "Worked on real-time projects to improve user interface and responsiveness",
     ],
   },
   {
@@ -35,6 +41,7 @@ const experiences = [
     period: "Mar – Apr 2025",
     points: [
       "Recreated company web pages from Figma files as responsive components with HTML, CSS, JavaScript, and React.js, collaborating with the team on feedback to refine the user experience",
+      "Gained practical experience in front-end development workflows",
     ],
   },
   {
@@ -43,6 +50,7 @@ const experiences = [
     period: "Jul – Aug 2025",
     points: [
       "Designed a Rent Management App in Figma, taking it from wireframes to interactive prototypes for mobile and desktop and iterating on usability feedback",
+      "Conducted user research and created wireframes, prototypes, and design systems",
     ],
   },
 ];
@@ -119,6 +127,17 @@ const ExperienceSection = () => {
                               </motion.li>
                             ))}
                           </ul>
+                          {exp.projectLink && (
+                            <a
+                              href={exp.projectLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 mt-4 text-sm text-primary font-medium bg-primary/10 hover:bg-primary/20 px-3 py-1.5 rounded-full transition-colors"
+                            >
+                              {exp.projectLabel}
+                              <ExternalLink className="w-3.5 h-3.5" />
+                            </a>
+                          )}
                         </div>
                       </div>
                     </CardContent>

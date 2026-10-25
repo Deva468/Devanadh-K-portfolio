@@ -1,17 +1,8 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { ExternalLink, Shield, Lock, Database, Languages, ScanLine } from "lucide-react";
+import { ExternalLink, Shield, Lock, Database, Languages } from "lucide-react";
 
 const myProjects = [
-  {
-    title: "Transformer-Based Static Code Analysis and Security Vulnerability Detection",
-    description:
-      "A cybersecurity-focused final-year project that analyzes source code and identifies potential security vulnerabilities using static code analysis and transformer-based machine learning techniques. The prototype accepts Python source code, analyzes potential security issues, and presents vulnerability findings and an analysis score to help developers understand insecure coding patterns.",
-    tags: ["Python", "FastAPI", "Static Code Analysis", "Transformer-Based ML", "Vulnerability Detection", "Security Analysis"],
-    icon: ScanLine,
-    link: null,
-    status: "Final-Year Academic Project — In Development",
-  },
   {
     title: "CoreDesk – IT Service Desk Platform",
     description:
@@ -64,8 +55,19 @@ const MyProjectsSection = () => {
           <div className="w-16 h-1 shimmer-line rounded mb-10" />
 
           <div className="grid md:grid-cols-2 gap-6">
-            {myProjects.map((project, i) => {
-              const card = (
+            {myProjects.map((project, i) => (
+              <motion.a
+                key={project.title}
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.15 }}
+                whileHover={{ y: -6 }}
+                className="block group"
+              >
                 <Card className="bg-card border-border card-interactive h-full overflow-hidden relative">
                   <div className="absolute top-0 left-0 w-full h-1 shimmer-line" />
                   <CardContent className="p-6">
@@ -73,13 +75,7 @@ const MyProjectsSection = () => {
                       <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                         <project.icon className="w-6 h-6 text-primary" />
                       </div>
-                      {project.link ? (
-                        <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:scale-110 transition-all" />
-                      ) : (
-                        <span className="text-xs px-2 py-1 rounded-full bg-amber-500/10 text-amber-500 font-medium border border-amber-500/30">
-                          In Development
-                        </span>
-                      )}
+                      <ExternalLink className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:scale-110 transition-all" />
                     </div>
                     <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
                       {project.title}
@@ -87,9 +83,6 @@ const MyProjectsSection = () => {
                     <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                       {project.description}
                     </p>
-                    {project.status && (
-                      <p className="text-xs text-muted-foreground italic mb-3">{project.status}</p>
-                    )}
                     <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <span
@@ -100,45 +93,14 @@ const MyProjectsSection = () => {
                         </span>
                       ))}
                     </div>
-                    {project.link && (
-                      <div className="mt-4 flex items-center gap-1 text-sm text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                        Visit Project
-                        <ExternalLink className="w-3 h-3" />
-                      </div>
-                    )}
+                    <div className="mt-4 flex items-center gap-1 text-sm text-primary font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                      Visit Project
+                      <ExternalLink className="w-3 h-3" />
+                    </div>
                   </CardContent>
                 </Card>
-              );
-
-              return project.link ? (
-                <motion.a
-                  key={project.title}
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.15 }}
-                  whileHover={{ y: -6 }}
-                  className="block group"
-                >
-                  {card}
-                </motion.a>
-              ) : (
-                <motion.div
-                  key={project.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.15 }}
-                  whileHover={{ y: -6 }}
-                  className="block group"
-                >
-                  {card}
-                </motion.div>
-              );
-            })}
+              </motion.a>
+            ))}
           </div>
         </motion.div>
       </div>

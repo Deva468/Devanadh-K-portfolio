@@ -56,7 +56,7 @@ const ResumeSection = () => {
               { icon: GraduationCap, title: "Education", desc: "B.E. CSE (Cyber Security)" },
               { icon: Briefcase, title: "Experience", desc: "5 Internships" },
               { icon: Code, title: "Skills", desc: "20+ Technologies" },
-              { icon: Award, title: "Certifications", desc: "15+ Certificates" },
+              { icon: Award, title: "Certifications", desc: "19+ Certificates" },
             ].map((item) => (
               <Card key={item.title} className="bg-card border-border hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1 transition-all duration-300">
                 <CardContent className="p-5 text-center">
