@@ -23,7 +23,11 @@ import certCursaTesting from "@/assets/cert-cursa-testing.jpg";
 const certificates = [
   { src: certOasisCompletion, alt: "OASIS Infobyte - Web Development and Designing Internship Completion" },
   { src: certOasisStar, alt: "OASIS Infobyte - Star Performer of AICTE Internship" },
+  { src: certAmd, alt: "AMD AI Academy - Kubernetes on AMD Instinct GPUs, From Zero to AI Inference" },
+  { src: certPrepinsta, alt: "PrepInsta - Ethical Hacking Course Completion" },
+  { src: certCursaTesting, alt: "Cursa - Software Testing for Beginners" },
   { src: certSimats, alt: "SIMATS Engineering - TechMaze at TechTrove 3.0 Achievement" },
+
   { src: certNexaura, alt: "NEXAURA'26 - Mind Maze Appreciation, New Prince Shri Bhavani College" },
   { src: certCisco, alt: "Cisco Networking Academy - Introduction to Cybersecurity" },
   { src: certCursa, alt: "Cursa - Principles of Management Course Completion" },
