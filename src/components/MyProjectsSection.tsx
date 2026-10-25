@@ -1,19 +1,11 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { ExternalLink, Shield, Lock, Database, Languages, ScanLine } from "lucide-react";
+import { ExternalLink, Shield, Lock, Database, Languages } from "lucide-react";
 
 const myProjects = [
   {
-    title: "Transformer-Based Static Code Analysis and Security Vulnerability Detection",
-    description:
-      "A cybersecurity-focused final-year project that analyzes source code and identifies potential security vulnerabilities using static code analysis and transformer-based machine learning techniques. The prototype accepts Python source code, analyzes potential security issues, and presents vulnerability findings and an analysis score to help developers understand insecure coding patterns.",
-    tags: ["Python", "FastAPI", "Static Code Analysis", "Transformer-Based ML", "Vulnerability Detection", "Security Analysis"],
-    icon: ScanLine,
-    link: null,
-    status: "Final-Year Academic Project — In Development",
-  },
-  {
     title: "CoreDesk – IT Service Desk Platform",
+
     description:
       "A full-stack IT service desk ticketing platform built on the MERN stack with ticket tracking, triaging, assigning, and resolving workflows, real-time analytics, user authentication, and REST API CRUD operations backed by MongoDB (Mongoose).",
     tags: ["MongoDB", "Express.js", "React.js", "Node.js", "MERN"],
